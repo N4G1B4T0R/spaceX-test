@@ -1,0 +1,28 @@
+{
+  "name": "spacex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:client": "cd src/client && npm i",
+    "install:server": "npm i",
+    "start": "concurrently \"npm run start:client\" \"npm run start:beckend\"",
+    "start:client": "cd src/client && npm run dev",
+    "start:beckend": "nodemon src/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "graphql": "^15.8.0",
+    "graphql-http": "^1.22.1",
+    "graphql-playground-middleware-express": "^1.7.23",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
